@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nameGame {
+    font-family: 'Licorice', cursive;
+    font-weight: bold;
+    font-size: 5em;
+    color: #5C6564;
+}

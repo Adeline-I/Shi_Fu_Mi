@@ -21,7 +21,7 @@ function compareChoice(userRandom, computerRandom) {
         result = `perdu !`;
     }
 
-    countPart ++;
+    countRound ++;
     return result;
 }
 
@@ -60,30 +60,30 @@ function scoreMessage(result) {
         computerScoreBox++;
     }
 
-    partProgress.innerHTML = `Partie : ${countPart}`;
+    roundProgress.innerHTML = `Manche : ${countRound}`;
     userScore.innerHTML = `Votre score est de ${userScoreBox}`;
     computerScore.innerHTML = `Le score de l'ordinateur est de ${computerScoreBox}`;
 }
 
-//Relancer le jeu.
+//Fin du jeu.
 
-function reloadScore(countPart, userScoreBox, computerScoreBox) {
-    if (countPart == 3) {
-        console.log(`Fin de la partie.`)
+function endGame(countRound, userScoreBox, computerScoreBox) {
+    if (countRound == 3) {
+        console.log(`Fin de la Roundie.`)
         userRandomRock.setAttribute("disabled", "disabled");
         userRandomPaper.setAttribute("disabled", "disabled");
         userRandomScissors.setAttribute("disabled", "disabled");
         reloadGame.removeAttribute("disabled");
         if (userScoreBox > computerScoreBox) {
-            userWinRound ++;
-            console.log(userWinRound);
+            userWinPart ++;
+            console.log(userWinPart);
         } else if (userScoreBox < computerScoreBox) {
-            computerWinRound ++;
+            computerWinPart ++;
         }
-        userRoundProgress.innerHTML = `Vous avez gagné ${userWinRound} manche(s).`;
-        computerRoundProgress.innerHTML = `L'ordinateur a gagné ${computerWinRound} manche(s).`;
     }
-}
+    userPartProgress.innerHTML = `Vous avez gagné ${userWinPart} partie(s).`;
+    computerPartProgress.innerHTML = `L'ordinateur a gagné ${computerWinPart} partie(s).`;
+};
 
 
 //////////Déclaration des variables//////////
@@ -93,20 +93,20 @@ let userRandomPaper = document.getElementById('userRandomPaper');
 let userRandomScissors = document.getElementById('userRandomScissors');
 let reloadGame = document.getElementById('reloadGame');
 
-let partProgress = document.getElementById('partProgress');
+let roundProgress = document.getElementById('roundProgress');
 let userScore = document.getElementById('userScore');
 let computerScore = document.getElementById('computerScore');
 let resultGame = document.getElementById('resultGame');
-let userRoundProgress = document.getElementById('userRoundProgress');
-let computerRoundProgress = document.getElementById('computerRoundProgress');
+let userPartProgress = document.getElementById('userPartProgress');
+let computerPartProgress = document.getElementById('computerPartProgress');
 
 
 
 //////////Début du jeu//////////
 
-let countPart = 0;
-let userWinRound = 0;
-let computerWinRound = 0;
+let countRound = 0;
+let userWinPart = 0;
+let computerWinPart = 0;
 let userScoreBox = 0;
 let computerScoreBox = 0;
 
@@ -133,9 +133,9 @@ userRandomRock.addEventListener('click', () => {
 
     scoreMessage(result);
 
-    //Relancer le jeu.
+    //Fin du jeu.
 
-    reloadScore(countPart, userScoreBox, computerScoreBox);
+    endGame(countRound, userScoreBox, computerScoreBox);
 });
 
 //Choix de l'utilisateur : Feuille
@@ -153,8 +153,11 @@ userRandomPaper.addEventListener('click', () => {
 
     //Messages de Score.
 
-    let resultMessage = scoreMessage(result);
-    return resultMessage;
+    scoreMessage(result);
+
+    //Fin du jeu.
+
+    endGame(countRound, userScoreBox, computerScoreBox);
 
 });
 
@@ -173,10 +176,27 @@ userRandomScissors.addEventListener('click', () => {
 
     //Messages de Score.
 
-    let resultMessage = scoreMessage(result);
-    return resultMessage;
+    scoreMessage(result);
+
+    //Fin du jeu.
+
+    endGame(countRound, userScoreBox, computerScoreBox);
 
 });
+
+//Choix de l'utilisateur : relancer le jeu
+
+reloadGame.addEventListener('click', () => {
+    countRound = 0;
+    userScoreBox = 0;
+    computerScoreBox = 0;
+    userRandomRock.removeAttribute("disabled");
+    userRandomPaper.removeAttribute("disabled");
+    userRandomScissors.removeAttribute("disabled");
+    reloadGame.setAttribute("disabled", "disabled");
+});
+
+
 
 
 
