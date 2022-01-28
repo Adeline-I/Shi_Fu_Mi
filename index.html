@@ -10,57 +10,71 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+                <p class="namePlayer">Player</p>
+                <p id="userScore"></p>
+                <p id="userPartProgress"></p>
+            </div>
+
             <div class="col">
                 <p class="nameGame">Shi Fu Mi !</p>
             </div>
-            <div class="col"></div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
 
             <div class="col">
-
-                
-
-                <form action="Exercice_1.html" method="post">
-
-                    <div>
-                        <button id="userRandomRock" type="button" class="btn btn-primary mb-3" disabled>pierre</button>
-
-                        <button id="userRandomPaper" type="button" class="btn btn-primary mb-3" disabled>feuille</button>
-
-                        <button id="userRandomScissors" type="button" class="btn btn-primary mb-3" disabled>ciseau</button>
-                    </div>
-
-                    <div>
-                        <button id="reloadGame" type="button" class="btn btn-primary mb-3" disabled>Recommencer</button>
-                    </div>
-
-                </form>
-
+                <p class="nameComputer">Computer</p>
+                <p id="computerScore"></p>
+                <p id="computerPartProgress"></p>
             </div>
-            <div class="col"></div>
+        </div>
 
+        <div class="row">
+            <div class="col">
+                <button id="userRandomRock" type="button" class="btn btn-primary mb-3" disabled>Pierre</button>
+                <button id="userRandomPaper" type="button" class="btn btn-primary mb-3" disabled>Feuille</button>
+                <button id="userRandomScissors" type="button" class="btn btn-primary mb-3" disabled>Ciseaux</button>
+            </div>
+
+            <div class="col"> 
+                <p id="roundProgress"></p>
+                <div>
+                    <img src="assets/img/rock.png" alt="Image d'une pierre.">
+                    <p id="resultGame"></p>
+                </div>                
+            </div>
+
+            <div class="col">
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p id="userRandomChoice"></p>
+            </div>
+
+            <div class="col">
+                <button id="reloadGame" type="button" class="btn btn-primary mb-3" disabled>Recommencer</button>
+            </div>
+
+            <div class="col">
+                <p id="computerRandomChoice"></p>
+            </div>
         </div>
 
     </div>
 
-    <p id="roundProgress"></p>
-    <p id="userScore"></p>
-    <p id="computerScore"></p>
-    <p id="resultGame"></p>
-    <p id="userPartProgress"></p>
-    <p id="computerPartProgress"></p>
+    
+    
+    
+    
+    
+    
+    
 
-    <script src="assets/js/Exercice_1.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>

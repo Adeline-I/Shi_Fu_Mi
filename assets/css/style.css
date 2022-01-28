@@ -3,10 +3,18 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    font-weight: bold;
+    font-size: 1.2em;
     background: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    padding: 1em;
+    height: 100vh;
+}
+
+.col {
+    text-align: center;
 }
 
 .nameGame {
@@ -14,4 +22,19 @@ body {
     font-weight: bold;
     font-size: 5em;
     color: #5C6564;
+}
+
+.namePlayer {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.nameComputer {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+img {
+    object-fit: contain;
+    object-position: center;
 }
