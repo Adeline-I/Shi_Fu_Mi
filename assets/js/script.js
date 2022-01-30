@@ -9,16 +9,16 @@ function compareChoice(userRandom, computerRandom) {
         result = `égalité !`;
 
     } else if (userRandom == 'Ciseaux' && computerRandom == 'Feuille') {
-        result = `gagné(e) !`;
+        result = `Victoire !`;
 
     } else if (userRandom == 'Pierre' && computerRandom == 'Ciseaux') {
-        result = `gagné(e) !`;
+        result = `Victoire !`;
 
     } else if (userRandom == 'Feuille' && computerRandom == 'Pierre') {
-        result = `gagné(e) !`;
+        result = `Victoire !`;
 
     } else {
-        result = `perdu !`;
+        result = `Défaite !`;
     }
 
     countRound ++;
@@ -51,12 +51,12 @@ function scoreMessage(result) {
     if (result == `égalité !`) {
         resultGame.innerHTML = `Égalité !`;       
 
-    } else if (result == `gagné(e) !`) {
-        resultGame.innerHTML = `Gagné(e) !`;
+    } else if (result == `Victoire !`) {
+        resultGame.innerHTML = `Victoire !`;
         userScoreBox++;
 
     } else {
-        resultGame.innerHTML = `Perdu !`;
+        resultGame.innerHTML = `Défaite !`;
         computerScoreBox++;
     }
 
@@ -81,16 +81,25 @@ function endGame(countRound, userScoreBox, computerScoreBox) {
             computerWinPart ++;
         }
     }
-    userPartProgress.innerHTML = `Partie(s) gagnée(s) : ${userWinPart}`;
-    computerPartProgress.innerHTML = `Partie(s) gagnée(s) : ${computerWinPart}`;
+    userPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${userWinPart}`;
+    computerPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${computerWinPart}`;
 };
 
 
 //////////Déclaration des variables//////////
 
+let staticBackdrop = document.getElementById('staticBackdrop');
+let sendModalBtn = document.getElementById('sendModalBtn');
+let firstNameModal = document.getElementById('firstNameModal');
+let namePlayerModal = document.getElementById('namePlayerModal');
+let rulesModal = document.getElementById('rulesModal');
+
 let userRandomRock = document.getElementById('userRandomRock');
 let userRandomPaper = document.getElementById('userRandomPaper');
 let userRandomScissors = document.getElementById('userRandomScissors');
+let computerRandomRock = document.getElementById('computerRandomRock');
+let computerRandomPaper = document.getElementById('computerRandomPaper');
+let computerRandomScissors = document.getElementById('computerRandomScissors');
 let reloadGame = document.getElementById('reloadGame');
 
 let userScore = document.getElementById('userScore');
@@ -108,6 +117,19 @@ let resultGame = document.getElementById('resultGame');
 
 //////////Début du jeu//////////
 
+$(window).on('load', function() {
+    $('#staticBackdrop').modal('show');
+});
+
+sendModalBtn.addEventListener('click', () => {
+    if (firstNameModal.value === '' || null || undefined) {
+        namePlayerModal.innerHTML = `Player`;
+    } else {
+        namePlayerModal.innerHTML = firstNameModal.value;
+    }
+    $('#rulesModal').modal('show');
+});
+
 let countRound = 0;
 let userWinPart = 0;
 let computerWinPart = 0;
@@ -117,6 +139,9 @@ let computerScoreBox = 0;
 userRandomRock.removeAttribute("disabled");
 userRandomPaper.removeAttribute("disabled");
 userRandomScissors.removeAttribute("disabled");
+computerRandomRock.setAttribute("disabled", "disabled");
+computerRandomPaper.setAttribute("disabled", "disabled");
+computerRandomScissors.setAttribute("disabled", "disabled");
 reloadGame.setAttribute("disabled", "disabled");
 
     

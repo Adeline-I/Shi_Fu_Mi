@@ -2,39 +2,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Licorice', cursive;
     font-weight: bold;
-    font-size: 1.2em;
-    background: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
+    font-size: 2rem;
+    background-image: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
 }
 
-.container-fluid {
-    padding: 1em;
-    height: 100vh;
+.startDialogModal {
+    display: flex;
+    justify-content: center;
+    margin-top: 10.2rem;
+}
+
+.startContentModal {
+    align-items: center;
+}
+
+input.firstName {
+width: 150%;
+}
+
+.sendBtn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #5C6564;
+}
+
+.row {
+    margin-top: 1rem;
 }
 
 .col {
     text-align: center;
 }
 
+p {
+    margin-bottom: 0;
+}
+
+.colIcons {
+    display: grid;
+}
+
 .nameGame {
-    font-family: 'Licorice', cursive;
+    font-size: 5rem;
     font-weight: bold;
-    font-size: 5em;
     color: #5C6564;
 }
 
 .namePlayer {
-    font-weight: bold;
-    font-size: 3em;
+    font-size: 4rem;
 }
 
 .nameComputer {
-    font-weight: bold;
-    font-size: 3em;
+    font-size: 4rem;
 }
 
-img {
-    object-fit: contain;
-    object-position: center;
+#resultGame {
+    width: 25rem;
+    height: 20rem;
+    margin: auto;
+    background-image: url(../img/zenGarden.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 7rem;
+    font-size: 4rem;
+}
+
+.btnReload {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #5C6564;
+}
+
+.modal-content {
+    width: 80%;
+    background-color: #DEDBCA;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ressourceIcons {
+    font-size: 1.2rem;
+}
+
+.closeBtn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #5C6564;
 }
