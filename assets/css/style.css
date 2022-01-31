@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); */
 
 body {
+    margin: 0;
     font-family: 'Licorice', cursive;
     font-weight: bold;
     font-size: 1.5rem;
@@ -13,7 +13,7 @@ p {
 }
 
 .row {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     align-items: center;
 }
 
@@ -34,7 +34,7 @@ p {
 }
 
 input.firstName {
-width: 150%;
+width: 125%;
 }
 
 .sendBtn {
@@ -45,18 +45,14 @@ width: 150%;
 
 /* Header */
 
-.namePlayer {
-    font-size: 2rem;
+.namePlayer, .nameComputer {
+    font-size: 1.8rem;
 }
 
 .nameGame {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #5C6564;
-}
-
-.nameComputer {
-    font-size: 2rem;
 }
 
 /* Section Game */
@@ -100,12 +96,17 @@ width: 150%;
 }
 
 .rulesDialogModal {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
 .modal-content {
-    width: 80%;
+    width: 95%;
     background-color: #DEDBCA;
+}
+
+.guruIcons {
+    width: 2rem;
+    height: auto;
 }
 
 .modal-title {
@@ -117,7 +118,6 @@ width: 150%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.7rem;
 }
 
 .closeBtn {
@@ -151,16 +151,12 @@ width: 150%;
     
     /* Header */
     
-    .namePlayer {
+    .namePlayer, .nameComputer {
         font-size: 3rem;
     }
     
     .nameGame {
         font-size: 4rem;
-    }
-    
-    .nameComputer {
-        font-size: 3rem;
     }
     
     /* Section Game */
@@ -177,10 +173,6 @@ width: 150%;
         width: 3rem;
         height: auto;
     }
-    
-    #roundProgress {
-        padding-top: 0.7rem;
-    }
 
     /* Footer */
 
@@ -189,9 +181,13 @@ width: 150%;
     }
     
     /* Rules Modal */
-    
+
     .rulesDialogModal {
-        margin-top: 2.8rem;
+        margin-top: 0;
+    }
+
+    .modal-content {
+        width: 80%;
     }
     
     .modal-title {
@@ -205,69 +201,54 @@ width: 150%;
     .closeBtn {
         font-size: 1.8rem;
     }
-    
-    .ressourceIcons {
-        font-size: 1.2rem;
-    }
 }
 
 @media screen and (min-width: 768px) {
-    body {
-    font-size: 2rem;
-}
 
-/* Start Modal */
+    .row {
+        margin-top: 1rem;
+    }
 
-.sendBtn {
-    font-size: 1.5rem;
-}
+    /* Start Modal */
 
-/* Header */
+    .sendBtn {
+        font-size: 1.5rem;
+    }
 
-.namePlayer {
-    font-size: 3.5rem;
-}
+    /* Header */
 
-.nameGame {
-    font-size: 5rem;
-}
+    .namePlayer, .nameComputer {
+        font-size: 3.5rem;
+    }
 
-.nameComputer {
-    font-size: 3.5rem;
-}
+    .nameGame {
+        font-size: 5rem;
+    }
 
-/* Section Game */
+    /* Section Game */
 
-.row.game {
-    flex-direction: row;
-}
+    .iconsBtn {
+        width: 4rem;
+        height: auto;
+    }
 
-.iconsBtn {
-    width: 4rem;
-    height: auto;
-}
+    /* Rules Modal */
 
-/* Rules Modal */
+    .rulesDialogModal {
+        margin-top: 3rem;
+    }
 
-.rulesDialogModal {
-    margin-top: 3rem;
-}
+    .modal-body {
+        font-size: 2rem;
+    }
 
-.modal-title {
-    font-size: 2.5rem;
-}
+    .closeBtn {
+        font-size: 1.5rem;
+    }
 
-.modal-body {
-    font-size: 2rem;
-}
-
-.closeBtn {
-    font-size: 1.5rem;
-}
-
-.ressourceIcons {
-    font-size: 1.2rem;
-}
+    .ressourceIcons {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -277,23 +258,11 @@ width: 150%;
 
 /* Header */
 
-.namePlayer {
-    font-size: 3rem;
-}
-
-.nameGame {
-    font-size: 5rem;
-}
-
-.nameComputer {
+.namePlayer, .nameComputer {
     font-size: 3rem;
 }
 
 /* Section Game */
-
-.row.game {
-    flex-direction: row;
-}
 
 .iconsBtn {
     width: 3.5rem;
@@ -314,98 +283,41 @@ width: 150%;
     padding-top: 5.5rem;
     font-size: 3rem;
 }
-
-/* Rules Modal */
-
-.rulesDialogModal {
-    margin-top: 3rem;
-}
-
-.modal-title {
-    font-size: 2.5rem;
-}
-
-.modal-body {
-    font-size: 2rem;
-}
-
-.closeBtn {
-    font-size: 1.5rem;
-}
-
-.ressourceIcons {
-    font-size: 1.2rem;
-}
 }
 
 @media screen and (min-width: 1200px) {
     body {
-        font-family: 'Licorice', cursive;
-        font-weight: bold;
         font-size: 2rem;
-        background-image: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
-    }
-    
-    p {
-        margin-bottom: 0;
-    }
-    
-    .row {
-        margin-top: 1rem;
-    }
-    
-    .col {
-        text-align: center;
     }
 
+    .row {
+        margin-top: 0rem;
+    }
+    
     /* Start Modal */
 
-.startDialogModal {
-    margin-top: 13.5rem;
-}
+    .startDialogModal {
+        margin-top: 13.5rem;
+    }
 
-.startContentModal {
-    align-items: center;
-}
-
-input.firstName {
-width: 150%;
-}
-
-.sendBtn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #5C6564;
-}
+    .sendBtn {
+        font-size: 1.5rem;
+    }
     
     /* Header */
     
+    .namePlayer, .nameComputer {
+        font-size: 3.5rem;
+    }
+
     .nameGame {
         font-size: 7rem;
-        font-weight: bold;
-        color: #5C6564;
-    }
-    
-    .namePlayer {
-        font-size: 4rem;
-    }
-    
-    .nameComputer {
-        font-size: 4rem;
     }
     
     /* Section Game */
 
-    .row.game {
-        flex-direction: row;
-    }
-    
-    .colIcons {
-        display: grid;
-    }
-
     .iconsBtn {
-        width: 6rem;
+        width: 5rem;
         height: auto;
     }
     
@@ -419,45 +331,10 @@ width: 150%;
         padding-top: 7rem;
         font-size: 4rem;
     }
-    
-    /* Footer */
-    
-    .btnReload {
-        font-size: 2rem;
-        font-weight: bold;
-        background-color: #5C6564;
-    }
+}
 
-    /* Rules Modal */
-
-    .modal-dialog {
-        display: flex;
-        justify-content: center;
-    }
-
-    .modal-content {
-        width: 80%;
-        background-color: #DEDBCA;
-    }
-
-    .modal-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .closeBtn {
-        font-size: 1.5rem;
-        font-weight: bold;
-        background-color: #5C6564;
-    }
-
-    .ressourceIcons {
-        font-size: 1.2rem;
+@media screen and (min-width: 1400px) {
+    .row {
+        margin-top: 1.5rem;
     }
 }
