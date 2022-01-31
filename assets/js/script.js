@@ -22,10 +22,10 @@ function compareChoice(userRandom, computerRandom) {
 //Choix de l'ordinateur.
 
 function computerChoice() {   
-    let computerRandom = Math.round(Math.random() * 2);        
-    if  (computerRandom == 0) {
+    let computerRandom = Math.floor(Math.random() * 3) + 1;        
+    if  (computerRandom == 1) {
         computerRandom = 'Pierre';    
-    } else if  (computerRandom == 1) {
+    } else if  (computerRandom == 2) {
         computerRandom = 'Feuille';    
     } else {
         computerRandom = 'Ciseaux';
@@ -183,3 +183,33 @@ reloadGame.addEventListener('click', () => {
     userRandomScissors.removeAttribute("disabled");
     reloadGame.setAttribute("disabled", "disabled");
 });
+
+//Correction
+// let whoWin = (userChoice, computerChoice) => {
+//     if( (userChoice==1 && computerChoice==3) ||
+//         (userChoice==2 && computerChoice==1) ||
+//         (userChoice==3 && computerChoice==2)) {
+//         result = 'Gagné';
+//     } else if (userChoice == computerChoice) {
+//         result = 'Egalité';
+//     } else {
+//         result = 'Perdu';
+//     }
+//     return result;
+// };
+
+// let clickedElement = (event) => {
+//    userChoice = parseInt(event.target.dataset.itemvalue);
+//    omputerChoice = Math.floor(Math.randum() *3) +1;
+//    result = whoWin(userChoice, computerChoice);
+//    console.log(result);
+// };
+
+// let userChoice;
+// let computerChoice;
+// let result;
+// let selectedItems = document.querySelectorAll('.shifumiItem');
+
+// selectedItems.forEach(element => {
+//     element.addEventListener('click', clickedElement);
+// });
