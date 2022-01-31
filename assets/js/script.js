@@ -64,6 +64,7 @@ function endGame(countRound, userScoreBox, computerScoreBox) {
             computerWinPart ++;
         }
     }
+    localStorage.setItem('winGame', userWinPart);
     userPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${userWinPart}`;
     computerPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${computerWinPart}`;
 };
@@ -118,6 +119,7 @@ sendModalBtn.addEventListener('click', () => {
         namePlayerModal.innerHTML = `Player`;
     } else {
         namePlayerModal.innerHTML = firstNameModal.value;
+        localStorage.setItem('userName', firstNameModal.value);
     }
     $('#rulesModal').modal('show');
 });
