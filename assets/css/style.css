@@ -1,17 +1,367 @@
 @import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); */
 
 body {
     font-family: 'Licorice', cursive;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-image: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
 }
 
+p {
+    margin-bottom: 0;
+}
+
+.row {
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.col {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Start Modal */
+
 .startDialogModal {
+    margin-top: 13.5rem;
+}
+
+.startContentModal {
+    align-items: center;
+}
+
+input.firstName {
+width: 150%;
+}
+
+.sendBtn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #5C6564;
+}
+
+/* Header */
+
+.namePlayer {
+    font-size: 2rem;
+}
+
+.nameGame {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5C6564;
+}
+
+.nameComputer {
+    font-size: 2rem;
+}
+
+/* Section Game */
+
+.row.game {
+    flex-direction: column-reverse;
+}
+
+.iconsBtn {
+    width: 3rem;
+    height: auto;
+}
+
+#roundProgress {
+    padding-top: 0.7rem;
+}
+
+#resultGame {
+    width: 17.5rem;
+    height: 14rem;
+    margin: auto;
+    background-image: url(../img/zenGarden_xs.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 4.8rem;
+    font-size: 3rem;
+}
+
+/* Footer */
+
+.btnReload {
+    font-weight: bold;
+    background-color: #5C6564;
+}
+
+/* Rules Modal */
+
+.modal-dialog {
     display: flex;
     justify-content: center;
-    margin-top: 10.2rem;
+}
+
+.rulesDialogModal {
+    margin-top: 3.5rem;
+}
+
+.modal-content {
+    width: 80%;
+    background-color: #DEDBCA;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.closeBtn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #5C6564;
+}
+
+.ressourceIcons {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .row {
+        margin-top: 1.4rem;
+    }
+    
+    /* Start Modal */
+    
+    .startDialogModal {
+        margin-top: 13rem;
+    }
+    
+    .sendBtn {
+        font-size: 1.8rem;
+    }
+    
+    /* Header */
+    
+    .namePlayer {
+        font-size: 3rem;
+    }
+    
+    .nameGame {
+        font-size: 4rem;
+    }
+    
+    .nameComputer {
+        font-size: 3rem;
+    }
+    
+    /* Section Game */
+    
+    .row.game {
+        flex-direction: row;
+    }
+
+    .colIcons {
+        display: grid;
+    }
+    
+    .iconsBtn {
+        width: 3rem;
+        height: auto;
+    }
+    
+    #roundProgress {
+        padding-top: 0.7rem;
+    }
+
+    /* Footer */
+
+    .btnReload {
+        font-size: 1.5rem;
+    }
+    
+    /* Rules Modal */
+    
+    .rulesDialogModal {
+        margin-top: 2.8rem;
+    }
+    
+    .modal-title {
+        font-size: 2.5rem;
+    }
+    
+    .modal-body {
+        font-size: 2.2rem;
+    }
+    
+    .closeBtn {
+        font-size: 1.8rem;
+    }
+    
+    .ressourceIcons {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+    font-size: 2rem;
+}
+
+/* Start Modal */
+
+.sendBtn {
+    font-size: 1.5rem;
+}
+
+/* Header */
+
+.namePlayer {
+    font-size: 3.5rem;
+}
+
+.nameGame {
+    font-size: 5rem;
+}
+
+.nameComputer {
+    font-size: 3.5rem;
+}
+
+/* Section Game */
+
+.row.game {
+    flex-direction: row;
+}
+
+.iconsBtn {
+    width: 4rem;
+    height: auto;
+}
+
+/* Rules Modal */
+
+.rulesDialogModal {
+    margin-top: 3rem;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+}
+
+.modal-body {
+    font-size: 2rem;
+}
+
+.closeBtn {
+    font-size: 1.5rem;
+}
+
+.ressourceIcons {
+    font-size: 1.2rem;
+}
+}
+
+@media screen and (min-width: 992px) {
+    .body {
+    font-size: 1.5rem;
+}
+
+/* Header */
+
+.namePlayer {
+    font-size: 3rem;
+}
+
+.nameGame {
+    font-size: 5rem;
+}
+
+.nameComputer {
+    font-size: 3rem;
+}
+
+/* Section Game */
+
+.row.game {
+    flex-direction: row;
+}
+
+.iconsBtn {
+    width: 3.5rem;
+    height: auto;
+}
+
+#roundProgress {
+    padding-top: 0;
+}
+
+#resultGame {
+    width: 21rem;
+    height: 16rem;
+    margin: auto;
+    background-image: url(../img/zenGarden_l.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 5.5rem;
+    font-size: 3rem;
+}
+
+/* Rules Modal */
+
+.rulesDialogModal {
+    margin-top: 3rem;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+}
+
+.modal-body {
+    font-size: 2rem;
+}
+
+.closeBtn {
+    font-size: 1.5rem;
+}
+
+.ressourceIcons {
+    font-size: 1.2rem;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-family: 'Licorice', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+        background-image: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
+    }
+    
+    p {
+        margin-bottom: 0;
+    }
+    
+    .row {
+        margin-top: 1rem;
+    }
+    
+    .col {
+        text-align: center;
+    }
+
+    /* Start Modal */
+
+.startDialogModal {
+    margin-top: 13.5rem;
 }
 
 .startContentModal {
@@ -27,76 +377,87 @@ width: 150%;
     font-weight: bold;
     background-color: #5C6564;
 }
+    
+    /* Header */
+    
+    .nameGame {
+        font-size: 7rem;
+        font-weight: bold;
+        color: #5C6564;
+    }
+    
+    .namePlayer {
+        font-size: 4rem;
+    }
+    
+    .nameComputer {
+        font-size: 4rem;
+    }
+    
+    /* Section Game */
 
-.row {
-    margin-top: 1rem;
-}
+    .row.game {
+        flex-direction: row;
+    }
+    
+    .colIcons {
+        display: grid;
+    }
 
-.col {
-    text-align: center;
-}
+    .iconsBtn {
+        width: 6rem;
+        height: auto;
+    }
+    
+    #resultGame {
+        width: 25rem;
+        height: 20rem;
+        margin: auto;
+        background-image: url(../img/zenGarden.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 7rem;
+        font-size: 4rem;
+    }
+    
+    /* Footer */
+    
+    .btnReload {
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: #5C6564;
+    }
 
-p {
-    margin-bottom: 0;
-}
+    /* Rules Modal */
 
-.colIcons {
-    display: grid;
-}
+    .modal-dialog {
+        display: flex;
+        justify-content: center;
+    }
 
-.nameGame {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #5C6564;
-}
+    .modal-content {
+        width: 80%;
+        background-color: #DEDBCA;
+    }
 
-.namePlayer {
-    font-size: 4rem;
-}
+    .modal-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
 
-.nameComputer {
-    font-size: 4rem;
-}
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-#resultGame {
-    width: 25rem;
-    height: 20rem;
-    margin: auto;
-    background-image: url(../img/zenGarden.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 7rem;
-    font-size: 4rem;
-}
+    .closeBtn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: #5C6564;
+    }
 
-.btnReload {
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: #5C6564;
-}
-
-.modal-content {
-    width: 80%;
-    background-color: #DEDBCA;
-}
-
-.modal-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ressourceIcons {
-    font-size: 1.2rem;
-}
-
-.closeBtn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #5C6564;
+    .ressourceIcons {
+        font-size: 1.2rem;
+    }
 }
