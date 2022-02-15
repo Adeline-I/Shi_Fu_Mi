@@ -10,140 +10,122 @@
     <title>Shi Fu Mi - Jeu : Pierre, Feuille, Ciseaux</title>
 </head>
 <body>
-
     <!-- Start Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog startDialogModal">
+        <div class="modal-dialog modal-dialog-centered startDialogModal">
             <div class="modal-content startContentModal">
-                <div class="modal-header">
+                <div class="modal-header justify-content-center">
                 <h5 class="modal-title" id="staticBackdropLabel">Choisissez un Pseudo :</h5>
                 </div>
                 <div class="modal-body">
                 <input id="firstNameModal" type="text" class="firstName" placeholder="Écrivez votre Pseudo ici !">
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer justify-content-center">
                 <button id="sendModalBtn" type="button" class="btn sendBtn" data-bs-dismiss="modal">Envoyer</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- Start Modal -->
     <div class="container-fluid">
         <!-- Header -->
         <div class="row">
-            <div class="col playerScore">
-                <p id="namePlayerModal" class="namePlayer"></p>
+            <div class="col-12 mt-3">
+                <h1 class="nameGame display-1">Shi Fu Mi !</h1>
+            </div>
+            <div class="col-6 playerScore">
+                <h5 id="namePlayerModal" class="namePlayer h1"></h5>
                 <p id="userScore"></p>
                 <p id="userPartProgress"></p>
             </div>
-
-            <div class="col">
-                <h1 class="nameGame">Shi Fu Mi !</h1>
-            </div>
-
-            <div class="col computerScore">
-                <p class="nameComputer">Computer</p>
+            <div class="col-6 computerScore">
+                <h5 class="nameComputer h1">Computer</h5>
                 <p id="computerScore"></p>
                 <p id="computerPartProgress"></p>
             </div>
         </div>
+        <!-- Header -->
         <!-- Section Game -->
         <div class="row game">
-            <div class="col colIcons">
+            <div class="col-12 col-lg-4 computerChoice">
+                <div id="computerRandomChoice"></div>
+            </div>
+            <div class="col-12 col-lg-4"> 
+                <div class="colResult mx-3 pt-3">
+                    <p id="roundProgress"></p>
+                    <p id="resultGame"></p>  
+                </div>   
+            </div>
+            <div class="col-12 col-lg-4 userChoice">
                 <button id="userRandomRock" type="button" class="btn shifumiItem" data-itemvalue="1" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/fluency/96/000000/stones.png" alt="3 pierres empilées"/>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/64/000000/stones.png" alt="3 pierres empilées"/>
                 </button>
 
                 <button id="userRandomPaper" type="button" class="btn shifumiItem" data-itemvalue="2" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/external-ddara-flat-ddara/96/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/64/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
                 </button>
 
                 <button id="userRandomScissors" type="button" class="btn shifumiItem" data-itemvalue="3" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
                 </button>
             </div>
+        </div>
+        <!-- Section Game -->
+        <!-- Footer -->
+        <div class="row">
 
-            <div class="col"> 
-                <p id="roundProgress"></p>
-                <p id="resultGame"></p>     
+            <div class="col-4">
+                <button id="reloadGame" type="button" class="btn btnReload" disabled>Recommencer</button>
             </div>
-
-            <div class="col colIcons">
-                <button id="computerRandomRock" type="button" class="btn" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/fluency/96/000000/stones.png" alt="3 pierres empilées"/>
+            
+            <div class="col-lg-12">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#rulesModal">
+                    <img class="img-fluid" src="https://img.icons8.com/ios-filled/48/212529/guru.png" alt="Personnage en méditation"/>
                 </button>
-
-                <button id="computerRandomPaper" type="button" class="btn" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/external-ddara-flat-ddara/96/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
-                </button>
-
-                <button id="computerRandomScissors" type="button" class="btn" disabled>
-                    <img class="iconsBtn" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
-                </button>
+                <!-- Button trigger modal -->
             </div>
         </div>
         <!-- Footer -->
-        <div class="row">
-            <div class="col">
-                <p id="userRandomChoice"></p>
-            </div>
-        
-            <div class="col">
-                <button id="reloadGame" type="button" class="btn btnReload" disabled>Recommencer</button>
-            </div>
-
-            <div class="col">
-                <p id="computerRandomChoice"></p>
-            </div>
-        </div>
-
-        <div class="row rulesBtn">
-            <div class="col">
-            <!-- Button trigger modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#rulesModal">
-                    <img src="https://img.icons8.com/ios-filled/48/212529/guru.png" alt="Personnage en méditation"/>
-                </button>
-            </div>
-        </div>
-        
         <!-- Rules Modal -->
         <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
-            <div class="modal-dialog rulesDialogModal">
+            <div class="modal-dialog modal-dialog-centered rulesDialogModal">
                 <div class="modal-content">
                     <div class="modal-header">
                     <h5 class="modal-title" id="rulesModalLabel">
-                        <img class="guruIcons" src="https://img.icons8.com/ios-filled/48/212529/guru.png" alt="Personnage en méditation"/>
+                        <img class="guruIcons img-fluid" src="https://img.icons8.com/ios-filled/32/212529/guru.png" alt="Personnage en méditation"/>
                         Règles du jeu :
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <p>
-                            <img src="https://img.icons8.com/fluency/64/000000/stones.png" alt="3 pierres empilées"/>
+                            <img class="img-fluid" src="https://img.icons8.com/fluency/64/000000/stones.png" alt="3 pierres empilées"/>
                             : Pierre
                         </p>
                         <p>
-                            <img src="https://img.icons8.com/external-ddara-flat-ddara/64/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
+                            <img class="img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/64/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
                             : Feuille
                         </p>
                         <p>
-                            <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
+                            <img class="img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
                             : Ciseaux
                         </p>
                         <br>
-                        <ul>
+                        <ul class=" text-start">
                             <li>La Pierre casse les Ciseaux</li>
                             <li>La Feuille recouvre la Pierre</li>
                             <li>Les Ciseaux découpent la Feuille</li>
                         </ul>
                         <p class="ressourceIcons">Icons by : <a href="https://icons8.com">https://icons8.com</a></p>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer justify-content-center">
                     <button type="button" class="btn closeBtn" data-bs-dismiss="modal">Fermer</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Rules Modal -->
     </div>
     
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>

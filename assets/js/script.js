@@ -25,10 +25,14 @@ function computerChoice() {
     let computerRandom = Math.floor(Math.random() * 3) + 1;        
     if  (computerRandom == 1) {
         computerRandom = 'Pierre';    
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/96/000000/stones.png" alt="3 pierres empilées"/>';
     } else if  (computerRandom == 2) {
-        computerRandom = 'Feuille';    
+        computerRandom = 'Feuille';  
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/96/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>';  
     } else {
         computerRandom = 'Ciseaux';
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>';
+
     }
     return computerRandom;
 };
@@ -65,8 +69,8 @@ function endGame(countRound, userScoreBox, computerScoreBox) {
         }
     }
     localStorage.setItem('winGame', userWinPart);
-    userPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${userWinPart}`;
-    computerPartProgress.innerHTML = `<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-racing-championship-victory-cup-isolated-on-a-white-background-rewards-color-tal-revivo.png"/> : ${computerWinPart}`;
+    userPartProgress.innerHTML = `Partie gagnée : ${userWinPart}`;
+    computerPartProgress.innerHTML = `Partie gagnée : ${computerWinPart}`;
 };
 
 //////////Déclaration des variables//////////
@@ -103,9 +107,6 @@ let computerScoreBox = 0;
 userRandomRock.removeAttribute("disabled");
 userRandomPaper.removeAttribute("disabled");
 userRandomScissors.removeAttribute("disabled");
-computerRandomRock.setAttribute("disabled", "disabled");
-computerRandomPaper.setAttribute("disabled", "disabled");
-computerRandomScissors.setAttribute("disabled", "disabled");
 reloadGame.setAttribute("disabled", "disabled");
 
 //Modals au chargement
@@ -128,10 +129,8 @@ sendModalBtn.addEventListener('click', () => {
 
 userRandomRock.addEventListener('click', () => {
     let userRandom = 'Pierre';
-    userRandomChoice.innerHTML = userRandom;
     //Choix de l'ordinateur.
     let computerRandom = computerChoice();
-    computerRandomChoice.innerHTML = computerRandom; 
     // Comparaison des 2 choix.
     let result = compareChoice(userRandom, computerRandom);
     //Messages de Score.
@@ -144,10 +143,8 @@ userRandomRock.addEventListener('click', () => {
 
 userRandomPaper.addEventListener('click', () => {
     let userRandom = 'Feuille';
-    userRandomChoice.innerHTML = userRandom;
     //Choix de l'ordinateur.
     let computerRandom = computerChoice();
-    computerRandomChoice.innerHTML = computerRandom;
     // Comparaison des 2 choix.
     let result = compareChoice(userRandom, computerRandom);
     //Messages de Score.
@@ -160,10 +157,8 @@ userRandomPaper.addEventListener('click', () => {
 
 userRandomScissors.addEventListener('click', () => {
     let userRandom = 'Ciseaux';
-    userRandomChoice.innerHTML = userRandom;
     //Choix de l'ordinateur.
     let computerRandom = computerChoice();
-    computerRandomChoice.innerHTML = computerRandom;
     // Comparaison des 2 choix.
     let result = compareChoice(userRandom, computerRandom);
     //Messages de Score.
