@@ -50,8 +50,8 @@ function scoreMessage(result) {
         computerScoreBox++;
     }
     roundProgress.innerHTML = `Manche : ${countRound}`;
-    userScore.innerHTML = `Score : ${userScoreBox}`;
-    computerScore.innerHTML = `Score : ${computerScoreBox}`;
+    userScore.innerHTML = `Manche(s) : ${userScoreBox}`;
+    computerScore.innerHTML = `Manche(s) : ${computerScoreBox}`;
 };
 
 //Fin du jeu.
@@ -69,8 +69,8 @@ function endGame(countRound, userScoreBox, computerScoreBox) {
         }
     }
     localStorage.setItem('winGame', userWinPart);
-    userPartProgress.innerHTML = `Partie gagnée : ${userWinPart}`;
-    computerPartProgress.innerHTML = `Partie gagnée : ${computerWinPart}`;
+    userPartProgress.innerHTML = `Partie(s) : ${userWinPart}`;
+    computerPartProgress.innerHTML = `Partie(s) : ${computerWinPart}`;
 };
 
 //////////Déclaration des variables//////////
@@ -178,33 +178,3 @@ reloadGame.addEventListener('click', () => {
     userRandomScissors.removeAttribute("disabled");
     reloadGame.setAttribute("disabled", "disabled");
 });
-
-//Correction
-// let whoWin = (userChoice, computerChoice) => {
-//     if( (userChoice==1 && computerChoice==3) ||
-//         (userChoice==2 && computerChoice==1) ||
-//         (userChoice==3 && computerChoice==2)) {
-//         result = 'Gagné';
-//     } else if (userChoice == computerChoice) {
-//         result = 'Egalité';
-//     } else {
-//         result = 'Perdu';
-//     }
-//     return result;
-// };
-
-// let clickedElement = (event) => {
-//    userChoice = parseInt(event.target.dataset.itemvalue);
-//    omputerChoice = Math.floor(Math.randum() *3) +1;
-//    result = whoWin(userChoice, computerChoice);
-//    console.log(result);
-// };
-
-// let userChoice;
-// let computerChoice;
-// let result;
-// let selectedItems = document.querySelectorAll('.shifumiItem');
-
-// selectedItems.forEach(element => {
-//     element.addEventListener('click', clickedElement);
-// });

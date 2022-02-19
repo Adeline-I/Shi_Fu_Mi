@@ -12,13 +12,13 @@
 <body>
     <!-- Start Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered startDialogModal">
-            <div class="modal-content startContentModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
                 <div class="modal-header justify-content-center">
                 <h5 class="modal-title" id="staticBackdropLabel">Choisissez un Pseudo :</h5>
                 </div>
                 <div class="modal-body">
-                <input id="firstNameModal" type="text" class="firstName" placeholder="Écrivez votre Pseudo ici !">
+                <input id="firstNameModal" type="text" class="firstName" maxlength="15" placeholder="Écrivez votre Pseudo ici !">
                 </div>
                 <div class="modal-footer justify-content-center">
                 <button id="sendModalBtn" type="button" class="btn sendBtn" data-bs-dismiss="modal">Envoyer</button>
@@ -30,15 +30,18 @@
     <div class="container-fluid">
         <!-- Header -->
         <div class="row">
-            <div class="col-12 mt-3">
+            <div class="col-12 mt-3 mb-lg-4">
                 <h1 class="nameGame display-1">Shi Fu Mi !</h1>
             </div>
-            <div class="col-6 playerScore">
+            <div class="col-5 col-lg-4 playerScore">
                 <h5 id="namePlayerModal" class="namePlayer h1"></h5>
                 <p id="userScore"></p>
                 <p id="userPartProgress"></p>
             </div>
-            <div class="col-6 computerScore">
+            <div class="col-2 col-lg-4">
+                <img class="iconsBtn img-fluid" src="https://img.icons8.com/office/96/000000/trophy--v1.png"/>
+            </div>
+            <div class="col-5 col-lg-4 computerScore">
                 <h5 class="nameComputer h1">Computer</h5>
                 <p id="computerScore"></p>
                 <p id="computerPartProgress"></p>
@@ -47,26 +50,26 @@
         <!-- Header -->
         <!-- Section Game -->
         <div class="row game">
-            <div class="col-12 col-lg-4 computerChoice">
+            <div class="col-12 col-lg-4 computerChoice my-2 py-2 my-lg-4">
                 <div id="computerRandomChoice"></div>
             </div>
-            <div class="col-12 col-lg-4"> 
+            <div class="col-12 col-lg-4 my-lg-4"> 
                 <div class="colResult mx-3 pt-3">
                     <p id="roundProgress"></p>
-                    <p id="resultGame"></p>  
+                    <p id="resultGame" class="h1"></p>  
                 </div>   
             </div>
-            <div class="col-12 col-lg-4 userChoice">
-                <button id="userRandomRock" type="button" class="btn shifumiItem" data-itemvalue="1" disabled>
-                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/64/000000/stones.png" alt="3 pierres empilées"/>
+            <div class="col-12 col-lg-4 userChoice my-2 py-2 my-lg-4">
+                <button id="userRandomRock" type="button" class="btn shifumiItem" disabled>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/96/000000/stones.png" alt="3 pierres empilées"/>
                 </button>
 
-                <button id="userRandomPaper" type="button" class="btn shifumiItem" data-itemvalue="2" disabled>
-                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/64/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
+                <button id="userRandomPaper" type="button" class="btn shifumiItem" disabled>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/96/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>
                 </button>
 
-                <button id="userRandomScissors" type="button" class="btn shifumiItem" data-itemvalue="3" disabled>
-                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
+                <button id="userRandomScissors" type="button" class="btn shifumiItem" disabled>
+                    <img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>
                 </button>
             </div>
         </div>
@@ -74,7 +77,7 @@
         <!-- Footer -->
         <div class="row">
 
-            <div class="col-4">
+            <div class="col-12 my-1 my-lg-5">
                 <button id="reloadGame" type="button" class="btn btnReload" disabled>Recommencer</button>
             </div>
             
@@ -93,7 +96,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                     <h5 class="modal-title" id="rulesModalLabel">
-                        <img class="guruIcons img-fluid" src="https://img.icons8.com/ios-filled/32/212529/guru.png" alt="Personnage en méditation"/>
+                        <img class="img-fluid" src="https://img.icons8.com/ios-filled/32/212529/guru.png" alt="Personnage en méditation"/>
                         Règles du jeu :
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -117,7 +120,7 @@
                             <li>La Feuille recouvre la Pierre</li>
                             <li>Les Ciseaux découpent la Feuille</li>
                         </ul>
-                        <p class="ressourceIcons">Icons by : <a href="https://icons8.com">https://icons8.com</a></p>
+                        <p>Icons by : <a href="https://icons8.com">https://icons8.com</a></p>
                     </div>
                     <div class="modal-footer justify-content-center">
                     <button type="button" class="btn closeBtn" data-bs-dismiss="modal">Fermer</button>

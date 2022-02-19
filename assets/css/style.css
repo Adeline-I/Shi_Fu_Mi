@@ -7,29 +7,27 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background-image: radial-gradient(#DADCCF, #ADBC9F, #ABB7A9);
 }
-.row{
+.row {
     align-items: center;
 }
 .sendBtn {
     font-weight: bold;
     background-color: #5C6564;
 }
-
 .btn:focus, .btn:hover {
     box-shadow: none;
 }
 
 /* Header */
 
-.playerScore, .computerScore, .computerChoice, .userChoice {
-    min-height: 7rem;
+.playerScore, .computerScore {
+    min-height: 8rem;
 }
-
 .namePlayer, .nameComputer {
     font-family: 'Licorice', cursive;
     font-weight: bold;
+    white-space: nowrap;
 }
-
 .nameGame {
     font-family: 'Licorice', cursive;
     font-weight: bold;
@@ -38,10 +36,17 @@ body {
 
 /* Section Game */
 
+.computerChoice, .userChoice {
+    min-height: 5rem;
+}
 .colResult {
     min-height: 8.5rem;
     border: 1rem ridge #756663;
     background-color: #D7C3A8;
+}
+#resultGame {
+    font-family: 'Licorice', cursive;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -50,15 +55,31 @@ body {
     font-weight: bold;
     background-color: #5C6564;
 }
-
 .modal-content {
     background-color: #DEDBCA;
 }
-
 .modal-title {
     font-weight: bold;
 }
-
 .closeBtn {
     background-color: #5C6564;
+}
+
+/*Media Querries*/
+
+@media (max-width: 1200px) {
+    .iconsBtn {
+    width: 4rem;
+    }
+}    
+@media (min-width: 992px) { 
+    .game {
+        flex-direction: row-reverse;
+    }
+    .playerScore, .computerScore {
+        min-height: 9rem;
+    }
+    .colResult {
+        min-height: 9rem;
+    }
 }
