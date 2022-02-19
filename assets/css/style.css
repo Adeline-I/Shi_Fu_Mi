@@ -17,6 +17,9 @@ body {
 .btn:focus, .btn:hover {
     box-shadow: none;
 }
+.btn:focus {
+    border: 0.3rem solid #5C6564;
+}
 
 /* Header */
 
