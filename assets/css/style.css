@@ -20,6 +20,15 @@ body {
 .btn:focus {
     border: 0.3rem solid #5C6564;
 }
+.modal-content {
+    background-color: #DEDBCA;
+}
+.modal-title {
+    font-weight: bold;
+}
+.closeBtn {
+    background-color: #5C6564;
+}
 
 /* Header */
 
@@ -56,15 +65,6 @@ body {
 
 .btnReload {
     font-weight: bold;
-    background-color: #5C6564;
-}
-.modal-content {
-    background-color: #DEDBCA;
-}
-.modal-title {
-    font-weight: bold;
-}
-.closeBtn {
     background-color: #5C6564;
 }
 
