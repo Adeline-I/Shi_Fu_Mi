@@ -75,7 +75,7 @@ function endGame(countRound, userScoreBox, computerScoreBox) {
 
 //////////Déclaration des variables//////////
 
-let staticBackdrop = document.getElementById('staticBackdrop');
+let startModal = document.getElementById('startModal');
 let sendModalBtn = document.getElementById('sendModalBtn');
 let firstNameModal = document.getElementById('firstNameModal');
 let namePlayerModal = document.getElementById('namePlayerModal');
@@ -112,7 +112,7 @@ reloadGame.setAttribute("disabled", "disabled");
 //Modals au chargement
 
 $(window).on('load', function() {
-    $('#staticBackdrop').modal('show');
+    $('#startModal').modal('show');
 });
 
 sendModalBtn.addEventListener('click', () => {
