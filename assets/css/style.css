@@ -82,7 +82,4 @@ body {
     .playerScore, .computerScore {
         min-height: 9rem;
     }
-    .colResult {
-        min-height: 9rem;
-    }
 }

@@ -25,13 +25,13 @@ function computerChoice() {
     let computerRandom = Math.floor(Math.random() * 3) + 1;        
     if  (computerRandom == 1) {
         computerRandom = 'Pierre';    
-        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/96/000000/stones.png" alt="3 pierres empilées"/>';
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/fluency/64/000000/stones.png" alt="3 pierres empilées"/>';
     } else if  (computerRandom == 2) {
         computerRandom = 'Feuille';  
-        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/96/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>';  
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-ddara-flat-ddara/64/000000/external-bonsai-furniture-ddara-flat-ddara.png" alt="Bonsaï"/>';  
     } else {
         computerRandom = 'Ciseaux';
-        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>';
+        computerRandomChoice.innerHTML='<img class="iconsBtn img-fluid" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/745A4E/external-rake-cultivation-kiranshastry-solid-kiranshastry.png" alt="Râteau"/>';
 
     }
     return computerRandom;
